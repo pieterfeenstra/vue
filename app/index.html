@@ -40,15 +40,15 @@
         <h3 class="text-muted">vue</h3>
       </div>
 
-      <div class="jumbotron">
-        <h1 class="display-3">'Allo, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+      <div class="jumbotron " id="app-2">
+        <h1  class="display-3" v-bind:title="message" >Hello World</h1>
+        <p class="lead">Bootstrap Vue.JS</p>
+        <p ><a class="btn btn-lg btn-success" href="#" >Go</a></p>
       </div>
 
       <div class="row marketing">
-        <div class="col-md-4">
-          <h4>HTML5 Boilerplate</h4>
+        <div class="col-md-4" id="app-3">
+          <h4 v-if="seen">{{message}}</h4>
           <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
           </div>
 
@@ -60,16 +60,22 @@
           <div class="col-md-4" id="app">
             <h4>{{message}}</h4>
             <p>{{pros}}</p>
-
           </div>
+        </div>
 
+        <div class="col-md-4" id="app-4">
+          <h4>{{message}}</h4>
+          <ol>
+            <li v-for="todo in todos">{{todo.text}}</li>
+          </ol>
+        </div>
       </div>
+
 
       <div class="footer">
         <p>♥ from the Yeoman team</p>
       </div>
-    </div>
-
+  </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -84,6 +90,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
